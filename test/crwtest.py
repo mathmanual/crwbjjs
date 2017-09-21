@@ -13,5 +13,6 @@ if __name__=='__main__':
     except ur.HTTPError:
         print(ur.HTTPError)
         sys.exit(0)
-    bsObj0 = BeautifulSoup(html0)
-    print(str(bsObj0))
+    bsObj0 = BeautifulSoup(html0, 'lxml')
+    namelist = bsObj0.findAll(id="3")
+    print(namelist)
